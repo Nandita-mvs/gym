@@ -47,4 +47,5 @@ urlpatterns = [
     path('add_attendance', Add_attendance,name='add_attendance'),
     path('view_attendance', View_attendance,name='view_attendance'),
     path('attendance', attendance,name='attendance'),
+    path('delete_attendance(?P<int:pid>)', delete_attendance,name='delete_attendance'),
 ]
