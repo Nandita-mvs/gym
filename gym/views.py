@@ -237,7 +237,7 @@ def usermember(request):
         plan1 = Plan.objects.all()
         
         if request.method=="POST":
-            n = request.user.name
+            n = c = request.POST["name"]
             c = request.POST["contact"]
             e = request.POST["emailid"]
             ag = request.POST["age"]
