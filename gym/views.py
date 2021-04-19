@@ -331,4 +331,3 @@ def delete_attendance(request,pid):
     attendance = Attendance.objects.get(id=pid)
     attendance.delete()
     return render('attendance')
-
