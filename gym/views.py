@@ -325,5 +325,10 @@ def attendance(request):
     d = {'attendance':attendance}
     return render(request,'attendance.html',d)
 
-
+def delete_attendance(request,pid):
+    if not request.user.is_staff:
+        return redirect('login')
+    attendance = Attendance.objects.get(id=pid)
+    attendance.delete()
+    return render('attendance')
 
